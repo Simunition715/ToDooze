@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/fonts/Quicksand-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+#root {
+  margin: 0 auto;
+  font-family: "quicksand", sans-serif;
+  background-color: #80BCBD;
+}
+ .App {
+  margin: 0 auto;
+   text-align: center;
+   min-height: 100vh;
+   display: flex;
+ }
+body {
+  margin: 0;
+}
+.material-icons-outlined {
+  color: #F9F7C9; /* Change the color to blue */
+}

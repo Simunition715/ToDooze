@@ -23,7 +23,7 @@ To get started with the ToDo app, follow these steps:
 2. Navigate to the project directory.
 3. Install dependencies using `npm install`.
 4. Run the app using `npm run dev`.
-5. Open your browser and go to `http://localhost:3000` to view the app.
+5. Open your browser and go to `http://localhost:5173` to view the app.
 
 ## Usage
 

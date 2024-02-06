@@ -1,11 +1,11 @@
 import './App.css'
-import ToDo from './components/Todo'
+import SideNav from './components/SideNav';
 
 function App() {
 
   return (
     <div className="App">
-      <ToDo toDos={[]}/>
+      <SideNav/>
     </div>
   )
 }

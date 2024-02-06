@@ -36,7 +36,7 @@ To get started with the ToDo app, follow these steps:
 
 ## Author
 
-This ToDo app was created by Will-i-am.
+This ToDo app was created by @Simunition715.
 
 ## License
 

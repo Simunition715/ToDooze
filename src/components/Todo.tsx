@@ -74,7 +74,12 @@ const ToDo: React.FC<ToDoProps> = ({ title, environment }) => {
             <h1 className='ToDo__Location'>{title}</h1>
             <h1 className='ToDo__Title'>ToDooze</h1>
             <form className="ToDo__Form">
-                <input placeholder='TaDooze' className="ToDo__Input" type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+                <input placeholder='TaDooze' className="ToDo__Input" type="text" value={newTodo} onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault(); // Prevent default form submission behavior
+                        handleAddTodo(); // Call handleAddTodo function
+                    }
+                }}  onChange={(e) => setNewTodo(e.target.value)} />
                 <button className="ToDo__Button" type="button" onClick={handleAddTodo}>Add</button>
             </form>
             <ul className="ToDo__List">
@@ -82,9 +87,7 @@ const ToDo: React.FC<ToDoProps> = ({ title, environment }) => {
                     if (todo.environment === environment) {
                         return (
                             <div className='ToDo__Container' key={todo.id}>
-                                {editTodo && editTodo.id === todo.id && todo.editMode && <span onClick={() => handleSaveEdit(editTodo)} className="material-icons-outlined">save</span>}
-
-                                {!todo.editMode && <span onClick={() => handleEditTodo(todo.id)} className="material-icons-outlined">edit</span>}
+                                <span onClick={() => handleCompletedToDo(todo.id)} className="material-icons-outlined">check</span>
                                 {todo.editMode ?
                                     <input
                                         placeholder='Edit Todo'
@@ -102,14 +105,29 @@ const ToDo: React.FC<ToDoProps> = ({ title, environment }) => {
                                     </li>
                                 }
                                 <span onClick={() => handleDeleteTodo(todo.id)} className="material-icons-outlined">delete</span>
+                                {!todo.editMode && <span onClick={() => handleEditTodo(todo.id)} className="material-icons-outlined">edit</span>}
+                                {editTodo && editTodo.id === todo.id && todo.editMode && <span onClick={() => handleSaveEdit(editTodo)} className="material-icons-outlined">save</span>}
                             </div>
                         );
                     }
                     return null;
                 })}
             </ul>
-            {todos.length === 0 && <><span className="material-icons-outlined">add_task</span> <span className='ToDo__Empty'>Congrats, you have nothing ToDooze</span></>}
-            {todos.length > 0 && <button onClick={() => setTodos([])} className="ToDo__Clear" type="button">Clear List</button>}
+            {todos.filter(todo => todo.environment === environment).length === 0 && 
+    <><span className="material-icons-outlined">add_task</span> 
+    <span className='ToDo__Empty'>Congrats, you have nothing ToDooze</span></>
+}
+
+{todos.filter(todo => todo.environment === environment).length > 0 && 
+    <button 
+        onClick={() => setTodos(prevTodos => prevTodos.filter(todo => todo.environment !== environment))}
+        className="ToDo__Clear" 
+        type="button"
+    >
+        Clear List
+    </button>
+}
+
             <div className='ToDo__Footer'>Created by: Will-i-am</div>
         </div>
     );

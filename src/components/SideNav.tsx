@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './SideNav.scss';
 import ToDo from './Todo';
@@ -6,20 +6,18 @@ import ToDo from './Todo';
 interface SideNavProps {}
 
 const SideNav: React.FC<SideNavProps> = () => {
-  const [environment, setEnvironment] = useState<string>(''); // State to track the selected environment
-
   return (
     <Router>
       <div className="SideNav">
         <ul>
           <li className="SideNav__Locations">
-            <Link to="/home" onClick={() => setEnvironment('home')}>Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li className="SideNav__Locations">
-            <Link to="/work" onClick={() => setEnvironment('work')}>Work</Link>
+            <Link to="/work">Work</Link>
           </li>
           <li className="SideNav__Locations">
-            <Link to="/errands" onClick={() => setEnvironment('errands')}>Errands</Link>
+            <Link to="/errands">Errands</Link>
           </li>
         </ul>
       </div>

@@ -1,0 +1,40 @@
+.SideNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    justify-content: flex-start;
+    width: 300px;
+    background-color: #f9f7c9;
+  
+    &__Locations {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #aad9bb;
+      cursor: pointer;
+      width: 120px;
+      height: 50px;
+      border: 3px solid #aad9bb;
+      border-radius: 10px;
+      background-color: #d5f0c1;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      &:hover,
+      &:focus {
+        background-color: #aad9bb;
+        color: #f9f7c9;
+        border: 3px solid #f9f7c9;
+        transition: 0.5s;
+      }
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  

@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# ToDo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple ToDo application built with React. It allows users to add, edit, and delete tasks, and it persists tasks using local storage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks
+- Edit existing tasks
+- Mark tasks as completed
+- Delete tasks
+- Persist tasks using local storage
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- SCSS for styling
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get started with the ToDo app, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Run the app using `npm start`.
+5. Open your browser and go to `http://localhost:3000` to view the app.
+
+## Usage
+
+- Type a task in the input field and press the "Add" button to add it to the list.
+- Click on the "Edit" button next to a task to edit its text.
+- Click on a task to mark it as completed. Click again to undo.
+- Click on the "Delete" button next to a task to delete it from the list.
+- Click on the "Clear List" button to remove all tasks from the list.
+
+## Author
+
+This ToDo app was created by Will-i-am.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

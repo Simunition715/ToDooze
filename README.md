@@ -5,6 +5,7 @@ This is a simple ToDo application built with React. It allows users to add, edit
 ## Features
 
 - Add new tasks
+- Add enviroments for sub lists such as Home | Work | Errands
 - Edit existing tasks
 - Mark tasks as completed
 - Delete tasks
